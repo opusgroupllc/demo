@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141001162856) do
+ActiveRecord::Schema.define(version: 20141003011633) do
 
   create_table "articles", force: true do |t|
     t.string   "title"
@@ -29,5 +29,29 @@ ActiveRecord::Schema.define(version: 20141001162856) do
   end
 
   add_index "comments", ["article_id"], name: "index_comments_on_article_id"
+
+  create_table "departments", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "employees", force: true do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.integer  "department_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "employees", ["department_id"], name: "index_employees_on_department_id"
+
+  create_table "workers", force: true do |t|
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

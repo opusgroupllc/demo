@@ -1,0 +1,34 @@
+<% provide(:title, 'Directory Listing') %>
+<h1>Directory Listing</h1>
+
+<table class="table table-hover table-bodered">
+  <thead>
+    <tr>
+      <th></th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Department</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @departments.each do |department| %>
+      <tr>
+      <td><%= department.employee.firstname  %></td>
+      <td><%= department.employee.lastname %></td>
+      <td><%= department.employee.department ? department.employee.department.name : 'Unassigned'  %></td>
+      <td><%= link_to "Transfer", '#' %></td>
+      <td><%= link_to 'Show', employee %></td>
+      <td><%= link_to 'Destroy', officer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to "New Employee", "#", class: "btn" %>
