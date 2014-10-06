@@ -62,6 +62,10 @@ GEM
     mime-types (2.3)
     minitest (5.4.2)
     multi_json (1.10.1)
+    pdf-core (0.2.5)
+    prawn (1.2.1)
+      pdf-core (~> 0.2.5)
+      ttfunk (~> 1.2.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -107,6 +111,7 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.4-java)
     tilt (1.4.1)
+    ttfunk (1.2.2)
     turbolinks (1.1.1)
       coffee-rails
     tzinfo (1.2.2)
@@ -127,6 +132,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
+  prawn
   rails (= 4.1.6)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)

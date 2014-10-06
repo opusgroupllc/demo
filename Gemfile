@@ -37,3 +37,4 @@ gem 'sdoc', '~> 0.4.0',                              group: :doc
 # gem 'capistrano-rails', group: :development
 gem 'tzinfo'
 gem 'tzinfo-data'
+gem 'prawn'

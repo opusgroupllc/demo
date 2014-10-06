@@ -14,7 +14,13 @@ class EmployeesController < ApplicationController
   end
 
   def update
-
+    @department = Department.find(params[:department_id])
+    @employee = @department.employees.find(params[:id])
+    if @employee.update(employee_params)
+      redirect_to(@employee)
+    else
+      render 'edit'
+    end
   end
 
   def destroy
