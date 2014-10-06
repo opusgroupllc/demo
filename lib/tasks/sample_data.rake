@@ -3,6 +3,12 @@ namespace :db do
   task populate: :environment do
     create_departments
     create_employees
+    # create_invoices
+    # create_vendors
+    # create_admins
+    # create_cases
+    # create_orders
+    # create_ticketsS
   end
 end
 

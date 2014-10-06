@@ -1,10 +1,12 @@
 <% provide(:title, 'Directory Listing') %>
 <h1>Directory Listing</h1>
 
+
+<%= will_paginate %>
+
 <table class="table table-hover table-bodered">
   <thead>
     <tr>
-      <th></th>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Department</th>
@@ -14,10 +16,9 @@
       <th></th>
     </tr>
   </thead>
-
+  <% @departments.each do |department| %>
+  <% department.employees.each do |employee| %>
   <tbody>
-    <% @departments.each do |department| %>
-    <% department.employees.each do |employee| %>
       <tr>
       <td><%= employee.firstname  %></td>
       <td><%= employee.lastname %></td>
@@ -30,7 +31,7 @@
     <% end %>
   </tbody>
 </table>
-
+<%= will_paginate %>
 <br>
 
 <%= link_to "New Employee", "#", class: "btn" %>
