@@ -4,7 +4,7 @@
     <p>
       This demo explores the utilities of Ruby on Rails (4) by building  serveral
       general business apps (in their simplest implementations).
-      <br> <%= link_to "Learn More", "#", class: "btn btn-primary btn-lg"  %>
+      <br> <%= link_to "Learn More " + "&raquo;".html_safe, "#", class: "btn btn-primary btn-lg"  %>
     </p>
   </div>
 </div>
@@ -38,7 +38,6 @@
         <br> <%= link_to "Explore >>", "#", class: "btn btn-default" %>
       </p>
     </div>
-    <br>
     <div class="col-md-4">
       <h1><small>Search Engine</small></h1>
       <p>

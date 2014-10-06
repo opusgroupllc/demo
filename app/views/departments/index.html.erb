@@ -17,14 +17,16 @@
 
   <tbody>
     <% @departments.each do |department| %>
+    <% department.employees.each do |employee| %>
       <tr>
-      <td><%= department.employee.firstname  %></td>
-      <td><%= department.employee.lastname %></td>
-      <td><%= department.employee.department ? department.employee.department.name : 'Unassigned'  %></td>
+      <td><%= employee.firstname  %></td>
+      <td><%= employee.lastname %></td>
+      <td><%= employee.department ? employee.department.name : 'Unassigned'  %></td>
       <td><%= link_to "Transfer", '#' %></td>
-      <td><%= link_to 'Show', employee %></td>
-      <td><%= link_to 'Destroy', officer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Show', '#' %></td>
+      <td><%= link_to 'Destroy', department, method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>
