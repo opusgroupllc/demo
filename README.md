@@ -25,20 +25,21 @@ are available
 ### Download
 To download:
 Clone the Git repo
-'''shell
+```shell
 git clone git://github.com/opusgroupllc/demo.git
 cd demo
-'''
+```
 
 Install gem dependencies
-'''shell
+```shell
 bundle install
-'''
+```
 
 Seed the database
-'''shell
-rake db:populate
-'''
+```shell
+bundle exec rake db:populate
+```
+
 
 ### License
 MIT. 
