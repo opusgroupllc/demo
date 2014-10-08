@@ -14,6 +14,17 @@ Rails.application.routes.draw do
     resources :employees
   end
 
+  resources :cases do
+    resources :files
+  end
 
+  resources :reports
+  resources :vendors
+  resources :clients
+  resources :customers
+  resources :suppliers
+  resources :customers
+  resources :orders
+  resources :admins
 
 end

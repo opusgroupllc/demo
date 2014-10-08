@@ -6,7 +6,7 @@ namespace :db do
     create_articles
     create_comments
     # create_invoices
-    # create_vendors
+    create_vendors
     # create_admins
     # create_cases
     # create_orders
@@ -75,6 +75,7 @@ end
 
 def  create_vendors
   20.times do |n|
+    #logo = Faker::Company.logo
     name = Faker::Company.name
     address = Faker::Address.street_name
     address2 = Faker::Address.secondary_address
@@ -85,12 +86,13 @@ def  create_vendors
     phone = Faker::PhoneNumber.phone_number
     email = Faker::Internet.email
     contact = Faker::Name.name
-    Vendor.create!(name: name, address: address, address2: address2, city: city, state: state,
+    Vendor.create!(#logo: logo,
+        name: name, address: address, address2: address2, city: city, state: state,
                                 zip: zip, website: website, phone: phone, email: email, contact: contact)
   end
 end
 
-def create_suplliers
+def create_suppliers
   20.times do |n|
     name = Faker::Company.name
     address = Faker::Address.street_name
@@ -106,20 +108,32 @@ def create_suplliers
                      zip: zip, website: website, phone: phone, email: email, contact: contact)
   end
 end
- create_admins
- create_cases
+
+ def create_products
+
+ end
+ def create_admins
+
+ end
+ def create_cases
+
+ end
   # create username
   # create case file
   # create stages
   # #
   # #
 
- create_orders
+ def create_orders
+
+ end
  # create supplier
  # create order items
  # create customer
  # #
- create_tickets
+ def create_tickets
+
+ end
  # create folder
  # create tickets
  # create users

@@ -1,0 +1,20 @@
+<% provide(title: "Vendors") %>
+<h1>Registered Vendors</h1>
+
+<%= link_to 'New Vendor', new_vendor_path %>
+
+<%= will_paginate %>
+
+<% @vendors.each do |vendor| %>
+
+<p>
+ <h3> <%= link_to vendor.name, vendor_path(vendor) %></h3>
+  <br>
+  <strong>Contact: </strong> <%= vendor.contact %> | <strong>Phone: </strong><%= vendor.phone %>
+  <%= link_to "Website", '#' %> | <%= link_to "More Details...", vendor_path(vendor), clas: "btn btn-primary"  %>
+  <hr>
+</p>
+
+<% end %>
+
+<%= will_paginate %>
