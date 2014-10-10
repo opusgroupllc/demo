@@ -1,12 +1,37 @@
 <footer>
-  <small><%= Time.now.year %>
-    <a href="http://opusgroupllc.com">Opus Group LLC</a>
-  </small>
   <nav>
-    <ul>
-      <li><%= link_to "Articles", articles_path %>
-      <li><%= link_to "Github", 'http://github.com/opusgroupllc' %></li>
-      <li><%= link_to "Internal Site", '#' %></li>
-    </ul>
+    <div class="row">
+        <div class="col-md-4" id="opus">
+          <ul>
+            <li class="pull-left">
+            <small><%= Time.now.year %>
+              <a href="http://opusgroupllc.com">Opus Group LLC</a>
+            </small>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4" id="demos">
+          <ul>
+              <li>Demos</li><br>
+              <li><%= link_to "Articles", articles_path %></li><br>
+              <li><%= link_to "Vendor Access", vendors_path %></li><br>
+              <li><%= link_to "Case Management", "#" %></li><br>
+              <li><%= link_to "Directory", "#" %></li><br>
+              <li><%= link_to "Scheduler", "#" %></li><br>
+              <li><%= link_to "Issue Tracker" %></li><br>
+              <li><%= link_to "Ticketing", "#" %></li><br>
+              <li><%= link_to "Report Generator", "#" %></li><br>
+              <li><%= link_to "Search Engine", "#" %></li><br>
+              <li><%= link_to "Billing", "#" %></li><br>
+              <li><%= link_to "Information Intake", "#" %></li>
+          </ul>
+        </div>
+        <div class="col-md-4" id="github">
+          <ul>
+              <li><%= link_to "Github", 'http://github.com/opusgroupllc' %></li><br>
+              <li><%= link_to "Internal Site", '#' %></li>
+          </ul>
+        </div>
+    </div>
   </nav>
 </footer>

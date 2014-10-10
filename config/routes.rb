@@ -18,6 +18,10 @@ Rails.application.routes.draw do
     resources :files
   end
 
+  resources :product_categories do
+    resources :products
+  end
+
   resources :reports
   resources :vendors
   resources :clients

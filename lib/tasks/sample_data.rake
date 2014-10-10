@@ -110,7 +110,18 @@ def create_suppliers
 end
 
  def create_products
+   productcategories = ProductCategories.all
+   50.times do |n|
+     name = Faker::product_name
+     productcategories.each { |productcategory| productcategoy.products.create!(name: name) }
+  end
+ end
 
+ def create_productcategories
+   20.times do |n|
+     category = Faker::Commerce.department
+     prodcutcategory.create!(category: category)
+   end
  end
  def create_admins
 
@@ -118,24 +129,11 @@ end
  def create_cases
 
  end
-  # create username
-  # create case file
-  # create stages
-  # #
-  # #
 
  def create_orders
 
  end
- # create supplier
- # create order items
- # create customer
- # #
+
  def create_tickets
 
  end
- # create folder
- # create tickets
- # create users
- # create admins
- # create stages [open, pending, escalated, archived]#

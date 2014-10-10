@@ -1,0 +1,9 @@
+<% provide(title: "Product Categories") %>
+
+
+<% @productcategories.each do |productcategory| %>
+
+   <h2>productcategory.category</h2> <i>productcategory.products.count</i>
+   <hr>
+
+<% end %>
