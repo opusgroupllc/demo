@@ -1,0 +1,10 @@
+<p>
+  <strong><%= product.name %></strong>
+
+</p>
+
+<p>
+  <% link_to 'Remove product from category', "#", class: "btn btn-danger",
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+</p>

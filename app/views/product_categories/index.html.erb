@@ -1,9 +1,11 @@
 <% provide(title: "Product Categories") %>
 
-
 <% @productcategories.each do |productcategory| %>
-
-   <h2>productcategory.category</h2> <i>productcategory.products.count</i>
+<div>
+   <a href="<%= product_category_path(productcategory) %>">
+     <h3><%= productcategory.category %> |
+       <small><%= productcategory.products.count %> Products</small></h3>
+   </a>
    <hr>
-
+</div>
 <% end %>

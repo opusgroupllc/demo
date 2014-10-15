@@ -5,6 +5,8 @@ namespace :db do
     create_employees
     create_articles
     create_comments
+    create_productcategories
+    create_products
     # create_invoices
     create_vendors
     # create_admins
@@ -75,7 +77,7 @@ end
 
 def  create_vendors
   20.times do |n|
-    #logo = Faker::Company.logo
+    logo = Faker::Company.logo
     name = Faker::Company.name
     address = Faker::Address.street_name
     address2 = Faker::Address.secondary_address
@@ -110,17 +112,17 @@ def create_suppliers
 end
 
  def create_products
-   productcategories = ProductCategories.all
+   productcategories = Productcategory.all
    50.times do |n|
-     name = Faker::product_name
-     productcategories.each { |productcategory| productcategoy.products.create!(name: name) }
+     name = Faker::Commerce.product_name
+     productcategories.each { |productcategory| productcategory.products.create!(name: name) }
   end
  end
 
  def create_productcategories
    20.times do |n|
      category = Faker::Commerce.department
-     prodcutcategory.create!(category: category)
+     Productcategory.create!(category: category)
    end
  end
  def create_admins
@@ -130,10 +132,15 @@ end
 
  end
 
- def create_orders
-
- end
-
  def create_tickets
 
  end
+
+ def create_orders
+   products = Products.all
+    100.times do |n|
+     order_date = Faker::Date.between(100.days.ago, Date.today)
+      products.each { |product| product.orders.create!(order_date: order_date) }
+     end
+   end
+

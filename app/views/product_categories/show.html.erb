@@ -1,0 +1,23 @@
+<%provide(:title, "Product Category | " + @productcategory.category)  %>
+
+<h3><%= @productcategory.category %></h3>
+
+<%= link_to 'Back', product_categories_path, class: "btn btn-default" %>
+<%= link_to 'Edit', edit_product_category_path(@productcategory), class: "btn btn-primary"  %>
+
+<hr>
+
+<h4>Add a product to this category</h4>
+<div class="well">
+ <%= render 'products/form' %>
+</div>
+
+<hr>
+
+<h3>Products</h3>
+
+<% @productcategory.products.each do |product| %>
+
+  <%= render @productcategory.products %>
+
+<% end %>
